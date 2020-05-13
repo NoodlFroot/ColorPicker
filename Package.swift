@@ -18,7 +18,8 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/t0rst/DynamicColor.git", from: "5.0.0")
+		// RAG: Fixing the release build problem using my own fork
+        .package(url: "https://github.com/NoodlFroot/DynamicColor", from: "5.0.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
