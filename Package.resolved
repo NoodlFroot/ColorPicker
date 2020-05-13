@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DynamicColor",
+        "repositoryURL": "https://github.com/NoodlFroot/DynamicColor",
+        "state": {
+          "branch": null,
+          "revision": "5b32807bb8594710bcb02e8ac20c673e1afdd698",
+          "version": "5.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
