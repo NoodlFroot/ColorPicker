@@ -8,13 +8,17 @@
 import SwiftUI
 import DynamicColor
 
+// HACK in some module globals to adjust the saturation/brightness in the computed properties Angle extensions
+var CPsaturation: CGFloat = 1.0
+var CPbrightness: CGFloat = 1.0
+
 extension Angle {
     var color: DynamicColor {
-        DynamicColor(hue: CGFloat(self.radians / (2 * .pi)), saturation: 1, brightness: 1, alpha: 1)
+		DynamicColor(hue: CGFloat(self.radians / (2 * .pi)), saturation: CPsaturation, brightness: CPbrightness, alpha: 1)
     }
     
     var colorView: Color {
-        Color(hue: self.radians / (2 * .pi), saturation: 1, brightness: 1)
+		Color(hue: self.radians / (2 * .pi), saturation: Double(CPsaturation), brightness: Double(CPbrightness))
     }
 }
 

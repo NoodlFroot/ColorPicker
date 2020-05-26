@@ -23,9 +23,13 @@ public struct ColorPicker : View {
         .aspectRatio(1, contentMode: .fit)
     }
     
-    public init(color: Binding<DynamicColor>, strokeWidth: CGFloat) {
+	public init(color: Binding<DynamicColor>, strokeWidth: CGFloat, saturation: CGFloat = 1.0, brightness: CGFloat = 1.0) {
        self.color = color
        self.strokeWidth = strokeWidth
+		
+		// Only way I can see to feed variables into the Angle extension
+		CPsaturation = saturation
+		CPbrightness = brightness
     }
 }
 
