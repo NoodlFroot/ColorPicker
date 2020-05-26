@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		79094DE5247D628F00973119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79094DE4247D628F00973119 /* Assets.xcassets */; };
 		79094DE8247D628F00973119 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79094DE7247D628F00973119 /* Preview Assets.xcassets */; };
 		79094DEB247D628F00973119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79094DE9247D628F00973119 /* LaunchScreen.storyboard */; };
+		79094DF6247D62B100973119 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79094DF4247D62B100973119 /* ColorExtension.swift */; };
+		79094DF7247D62B100973119 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79094DF5247D62B100973119 /* ColorPicker.swift */; };
+		79094DFA247D631400973119 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 79094DF9247D631400973119 /* DynamicColor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		79094DE7247D628F00973119 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79094DEA247D628F00973119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79094DEC247D628F00973119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79094DF4247D62B100973119 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		79094DF5247D62B100973119 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79094DFA247D631400973119 /* DynamicColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 		79094DDD247D628D00973119 /* ColourPicker Example */ = {
 			isa = PBXGroup;
 			children = (
+				79094DF2247D62B100973119 /* Sources */,
 				79094DDE247D628D00973119 /* AppDelegate.swift */,
 				79094DE0247D628D00973119 /* SceneDelegate.swift */,
 				79094DE2247D628D00973119 /* ContentView.swift */,
@@ -75,6 +82,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		79094DF2247D62B100973119 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				79094DF3247D62B100973119 /* ColorPicker */,
+			);
+			name = Sources;
+			path = ../../../Sources;
+			sourceTree = "<group>";
+		};
+		79094DF3247D62B100973119 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				79094DF4247D62B100973119 /* ColorExtension.swift */,
+				79094DF5247D62B100973119 /* ColorPicker.swift */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +116,9 @@
 			dependencies = (
 			);
 			name = "ColourPicker Example";
+			packageProductDependencies = (
+				79094DF9247D631400973119 /* DynamicColor */,
+			);
 			productName = "ColourPicker Example";
 			productReference = 79094DDB247D628D00973119 /* ColourPicker Example.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 79094DD2247D628D00973119;
+			packageReferences = (
+				79094DF8247D631400973119 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
 			productRefGroup = 79094DDC247D628D00973119 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,7 +178,9 @@
 			files = (
 				79094DDF247D628D00973119 /* AppDelegate.swift in Sources */,
 				79094DE1247D628D00973119 /* SceneDelegate.swift in Sources */,
+				79094DF7247D62B100973119 /* ColorPicker.swift in Sources */,
 				79094DE3247D628D00973119 /* ContentView.swift in Sources */,
+				79094DF6247D62B100973119 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79094DF8247D631400973119 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NoodlFroot/DynamicColor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79094DF9247D631400973119 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79094DF8247D631400973119 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79094DD3247D628D00973119 /* Project object */;
 }
